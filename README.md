@@ -6,7 +6,7 @@ Uniteras  is a computer program writen in the Python programming language. Pytho
 1.	Download the program from here:  https://github.com/thornad/Uniteras
 2.	Use PyCharm or a text editor, like Notepad or TextEdit or Vim to edit the program. find the definiton of the ‘demo’ function towards the end the line that begin with “ def demo() “, and bellow it change the values of the parameters to your particular values. Use 0 as a value for the parameters for which you do not have any values of your own.
 3.	Save the program to disk.
-4.	Run the program from with Pycharm, or from a comman line using the command:   python Uniteras.py
+4.	Run the program from with Pycharm, or from a command line interface by typing:   python Uniteras.py
 
 
 (c) 2021 Technosophics Ltd -  All Rights Reserved
