@@ -1,3 +1,5 @@
+# Construction Case   v3.0  (c) Adi Andrei / Radu Andrei / Technosophics Ltd 1992 - 2022 - ALL RIGHTS RESERVED
+
 from decimal import Decimal
                              
 def current_layer():
@@ -9,7 +11,7 @@ def current_layer():
     if WN<WO+2 and WN>WO-2 and CBR<15 and CBR >5 and IC<1.2 and IC>1 and DM<50 and DM>0 and F>75 and IP<20 and IP>10 and EN+A+G+FRG+DU==0 : C=5   
     if WN<WO-2 and CBR>15 and IC>1.2 and DM<50 and DM >0 and F>35 and IP>10 and EN+A+G+FRG+DU==0 : C=6           
     if WN>WO+4 and CBR<3 and CBR >0 and IC<.9 and IC>0 and DM<50 and DM >0 and F>35 and IP<50 and IP>20 and EN+A+G+FRG+DU==0 : C=7    
-    if WN<WO+4 and WN>WO-4 and CBR<15 and CBR >3 and IC<1.7 and IC>.9 and DM<50 and DM>0 and F>35 and IP<50 and IP>20 and EN+A+G+FRG+DU==O : C=8   
+    if WN<WO+4 and WN>WO-4 and CBR<15 and CBR >3 and IC<1.7 and IC>.9 and DM<50 and DM>0 and F>35 and IP<50 and IP>20 and EN+A+G+FRG+DU==0 : C=8
     if WN<WO-4 and CBR> 15 and IC>1.3 and DM<50 and DM >0 and F>35 and IP<50 and IP>20 and EN+A+G+FRG+DU==0 : C=9        
     if DM<50 and DM >0 and F>35 and IP>50 and CBR+IC+EN+A+G+FRG+DU==0 : C=10                 
     if DM<50 and DM>0 and F<12 and F>5 and EN>35 and G<30 and G>0 and IC+CBR+A+IP+FRG+DU==0 : C=11            
@@ -108,41 +110,41 @@ def base_layer():
 
 ##### Main  Program #####
 def main():
-    print("Teras Construction Case   v3.0  (c) Adi Andrei / Radu Andrei / Technosophics Ltd 1992 - 2022")
+    print("Construction Case   v3.0  (c) Adi Andrei / Radu Andrei / Technosophics Ltd 1992 - 2022")
 
     global  WN, WO, CBR, IC, DM, F, EN, A, G, IP, FRG, DU, C, K, CP, SA, RO, RU
 
-    print("INTRODUCETI DATELE :")
-    WN = Decimal(input("UMIDITATE NATURALA (WN)="))
-    WO = Decimal(input("UMIDITATE OPTIMA  (WO)="))
-    CBR = Decimal(input("CBR ="))
-    IC = Decimal(input("INDICE CONSISTENTA (IC)="))
-    DM = Decimal(input("DIMENSIUNE MAXIMA (DM)="))
-    F = Decimal(input("FRACTIUNI FINE (F)="))
-    EN = Decimal(input("ECHIVALENT NISIP  (EN)="))
-    A = Decimal(input("ALTERABILITATE  (A)="))
-    G = Decimal(input("TRACTIUNI GROSIERE (G)="))
-    IP = Decimal(input("PLASTICITATE (IP)="))
-    FRG = Decimal(input("FRAGMENTABILITATE (FRG)="))
-    DU = Decimal(input("DENSITATE (DU)="))
+    print("Enter Data :")
+    WN = Decimal(input("natural moisture content (WN)="))
+    WO = Decimal(input("optimum moisture content (WO)="))
+    CBR = Decimal(input("bearing capacity index (CBR)="))
+    IC = Decimal(input("consistency index (IC)="))
+    DM = Decimal(input("maximum  size (DM)="))
+    F = Decimal(input("fine fraction (F)="))
+    EN = Decimal(input("sand equivalent (EN)="))
+    A = Decimal(input("alterability (A)="))
+    G = Decimal(input("rough fraction (G)="))
+    IP = Decimal(input("plasticity index (IP)="))
+    FRG = Decimal(input("fragmentation (FRG)="))
+    DU = Decimal(input("dry density (DU)="))
 
     C = current_layer()
 
     if C == 0:
-        print("*** CAZ NEIDENTifICAT. RECOMandAM INVESTISATII SUPLIIMENTARE")
+        print("*** Sorry - Unidentified construction case ***")
     else:
-        print("##### CAZUL DE CONSTRUCTIE (straturi curente) nr:", C)
+        print("### Construction case identified (current layers) nr:", C)
 
-    if input("DorITI IDENTifICAREA SI PENTRU STRATURILE DE ForMA?(D/N)") == 'D':
+    if input("Would you like the base layer construction case identification too?  (y/n)") == 'y':
         CP = Decimal(input("CAPACITATE PorTANTA (CP)="))
         SA = Decimal(input("SENSIBILITAE LA ACTIUNEA APEI (SA)="))
         RO = Decimal(input("RISCUL DE UMEZIRE DIN APE SUBTERANE (RU)="))
 
         K = base_layer()
         if K == 0:
-            print("*** CAZ NEIDENTifICAT. RECOMandAM INVESTISATII SUPLIIMENTARE")
+            print("*** Sorry - Unidentified construction case ***")
         else:
-            print("##### CAZUL DE CONSTRUCTIE (straturi baza) nr:", K)
+            print("### Base layer construction case identified nr:", K)
 
 if __name__ == "__main__":
     main()

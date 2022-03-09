@@ -1,4 +1,4 @@
-# Uniteras v10.4  (c) Adi Andrei / Radu Andrei / Technosophics Ltd 1992 - 2022
+# Uniteras v10.4  (c) Adi Andrei / Radu Andrei / Technosophics Ltd 1992 - 2022   ALL RIGHTS RESERVED
 
 #  *TERAASH0.01 *  
 def teraasho():
@@ -287,48 +287,53 @@ def uscs():
 def demo():
     global CP, FA, FC, FD, FE, FG, FI, FJ, X, Y, LL, IP, IG, WN, WO, CBR, IC, DM, Z, \
         EN, ALT, FRG, DU, MO, FP, CC, UN, ARG, P, N, UL, AP, APN, FK, CPS, SID
-    CP = 0  # soil category ,cp
-    FA = 0  # fraction 0.05-0.25,fa
-    FC = 0  # fraction 0.25-0.5 ,fc
-    FD = 0  # fraction 0.5 - 2 ifd
-    FE = 0  # fraction 2 - 20 ife
-    FG = 0  # fraction 20 - 70 ,fg
-    FI = 0  # fraction 70 -200 ji
-    FJ = 0  # fraction <200 fj
-    X = 40  # fraction <2 (N.10),x
-    Y = 30  # fraction <0.425 (N.40) y
-    LL = 30  # liquid limit ,LL
-    IP = 9  # plasticity index,IP
-    IG = 5  # group index,IG
-    WN = 0  # natural moisture content,wn
-    WO = 0  # optimum moisture content  ,wo
-    CBR = 0  # bearing capacity index,cbr
-    IC = 0  # consistency index  ,ic
-    DM = 0  # maximum  size ,dm
-    Z = 40  # fine fraction  (<0.074 sau <0.080 mm) z
-    EN = 0  # sand equivalent  ,en
-    ALT = 0  # alterability ,alt= ")
-    FRG = 0  # fragmentation  frg
-    DU = 0  # dry density ,du
-    MO = 0  # organic matter content  ,mo
-    FP = 0  # fraction >4.75 (N.4)/p
-    CC = 0  # curvature coefficient  ,cc
-    UN = 0  # unevenness coefficient  ,un
-    ARG = 0  # fraction <0.005 ,arg
-    P = 0  # fraction silt (0.005<d<0.05),p
-    N = 0  # fraction sand(0.05<d< 2) ,n
-    UL = 0  # free inflation ,u1
-    AP = 0  # fraction clay+silt(d<0.05),ap
-    APN = 0  # fraction clay+silt+fine sand (d<0.25) apn
-    FK = 0  # coarse fraction (>2mm) fk
-    CPS = 0  # compressibility,cps
-    SID = 0  # sensibility at though -freezing ,sid
+    CP = 0  # soil category (CP)
+    FA = 0  # fraction 0.05-0.25 (FA)
+    FC = 0  # fraction 0.25-0.5 (FC)
+    FD = 0  # fraction 0.5 - 2 (FD)
+    FE = 0  # fraction 2 - 20 (FE)
+    FG = 0  # fraction 20 - 70 (FG)
+    FI = 0  # fraction 70 -200 (FI)
+    FJ = 0  # fraction <200 (FJ)
+    X = 40  # fraction <2 (N.10) (X)
+    Y = 30  # fraction <0.425 (N.40) (Y)
+    LL = 30  # liquid limit (LL)
+    IP = 9  # plasticity index (IP)
+    IG = 5  # group index (IG)
+    WN = 0  # natural moisture content (WN)
+    WO = 0  # optimum moisture content (WO)
+    CBR = 0  # bearing capacity index (CBR)
+    IC = 0  # consistency index (IC)
+    DM = 0  # maximum  size (DM)
+    Z = 40  # fine fraction  (<0.074 or <0.080 mm) (Z)
+    EN = 0  # sand equivalent (EN)
+    ALT = 0  # alterability (ALT)
+    FRG = 0  # fragmentation (FRG)
+    DU = 0  # dry density (DU)
+    MO = 0  # organic matter content (MO)
+    FP = 0  # fraction >4.75 (FP)
+    CC = 0  # curvature coefficient  (CC)
+    UN = 0  # unevenness coefficient (UN)
+    ARG = 0  # fraction <0.005 (ARG)
+    P = 0  # fraction silt (0.005<d<0.05)  (P)
+    N = 0  # fraction sand(0.05<d< 2) (N)
+    UL = 0  # free inflation (UL)
+    AP = 0  # fraction clay+silt(d<0.05)   (AP)
+    APN = 0  # fraction clay+silt+fine sand (d<0.25)  (APN)
+    FK = 0  # coarse fraction (>2mm) (FK)
+    CPS = 0  # compressibility  (CPS)
+    SID = 0  # sensibility at though-freezing (SID)
 
-    print("Uniteras v10.4  (c) Adi Andrei / Radu Andrei/ Technosophics Ltd 1992 - 2021")
+    print("Uniteras v10.4  (c) Adi Andrei / Radu Andrei/ Technosophics Ltd 1992 - 2022")
     print("AASHO ....:", teraasho())
     print("RTR :", rtr())
     print("US :", uscs())
     print("ROMTERAS...:", romteras())
 
 
-demo()
+
+def main():
+    demo()
+
+if __name__ == "__main__":
+    main()
