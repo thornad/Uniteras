@@ -13,4 +13,8 @@ ConstructionCase is a computer program capable of identifying the type of constr
 Run the program from a command line interface by typing:   python Uniteras.py
 Enter your particular values when asked
 
+# Construction Case Guide Tables
+Once a case construction is identified with either Uniteras.py or ConstructionGuide.py, you can look up the corresponding table for a guide on how to proceed for that particular case in the Tables for Earthworks Construction Cases document.
+
+
 (c) 1992 - 2022 Technosophics Ltd -  All Rights Reserved
